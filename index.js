@@ -14,12 +14,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/api/fileanalyse', upload.single('upfile'), function (req,res,next) {
-    console.log(req.file);
-    console.log(req.file.filename);
-    console.log(req.file.originalname);
-    console.log(req.file.mimetype);
-    console.log(req.file.size);
-    res.json({name:req.file.originalname,type:req.file.mimetype,size:req.file.size});
+    res.json({name:req.file.originalnam,type:req.file.mimetype,size:req.file.size});
 });
 
 
